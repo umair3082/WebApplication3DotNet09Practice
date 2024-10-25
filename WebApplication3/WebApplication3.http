@@ -1,0 +1,74 @@
+﻿@WebApplication3_HostAddress = https://localhost:7006
+
+POST {{WebApplication3_HostAddress}}/todoitems
+Content-Type: application/json
+{
+  "name":"walk dog",
+  "isComplete":true
+}
+###
+GET {{WebApplication3_HostAddress}}/todoitems/complete
+
+###
+PUT {{WebApplication3_HostAddress}}/todoitems/1
+Content-Type: application/json
+{
+    "name": "walk dog test",
+    "isComplete": true
+}
+
+###
+
+DELETE {{WebApplication3_HostAddress}}/todoitems/1
+
+###
+
+GET {{WebApplication3_HostAddress}}/
+
+###
+
+
+GET {{WebApplication3_HostAddress}}/todos/umair
+
+###
+
+@userid=1
+@bookid=200
+GET {{WebApplication3_HostAddress}}/todos/GetRouteParams/{{userid}}/book/{{bookid}}
+
+###
+
+POST {{WebApplication3_HostAddress}}/todos/upload
+Content-Type: application/json
+
+{
+  //IFormFile
+}
+
+###
+
+GET {{WebApplication3_HostAddress}}/todos/query-string-ids
+
+###
+
+GET {{WebApplication3_HostAddress}}/todos/query-string-ids
+X-Todo-Id: 1,2
+###
+
+GET {{WebApplication3_HostAddress}}/todos/query-string-ids
+X-Todo-Id: 1
+X-Todo-Id: 2
+X-Todo-Id: 3
+###
+
+GET {{WebApplication3_HostAddress}}/todos/query-ids
+X-Todo-Id: 1
+###
+
+GET {{WebApplication3_HostAddress}}/todos/oldepath
+
+###
+
+GET {{WebApplication3_HostAddress}}/admin
+
+###
